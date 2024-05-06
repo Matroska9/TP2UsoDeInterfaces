@@ -25,7 +25,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButtonCargarUno_clicked()
 {
-    stackUser->cargarPila();
+    if(ui->radioButton_2->isChecked()) {
+        stackUser->cargarVehiculo();
+    } else {
+        stackUser->cargarDepartamento();
+    }
 }
 
 

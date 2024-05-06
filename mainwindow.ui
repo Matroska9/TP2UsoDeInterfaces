@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>218</width>
-    <height>94</height>
+    <width>224</width>
+    <height>120</height>
    </rect>
   </property>
   <property name="maximumSize">
    <size>
-    <width>218</width>
-    <height>94</height>
+    <width>224</width>
+    <height>120</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -35,6 +35,19 @@
         <property name="text">
          <string>Memoria dinámica</string>
         </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_2">
+        <property name="text">
+         <string>Cargar vehiculo/departamento</string>
+        </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
+        </property>
        </widget>
       </item>
       <item>
@@ -42,7 +55,7 @@
         <item>
          <widget class="QPushButton" name="pushButtonCargarUno">
           <property name="text">
-           <string>Cargar un Vehículo</string>
+           <string>Cargar un elemento</string>
           </property>
          </widget>
         </item>

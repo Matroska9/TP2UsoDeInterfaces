@@ -9,7 +9,8 @@ class StackUser
         StackUser(StackInterface *stack);
         virtual ~StackUser();
 
-        void cargarPila();
+        void cargarVehiculo();
+        void cargarDepartamento();
         void imprimirPila();
 
     private:

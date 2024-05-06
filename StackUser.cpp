@@ -2,13 +2,14 @@
 #include <iostream>
 #include <random>
 #include "Vehiculo.h"
+#include "Departamento.h"
 #include <QDebug>
 
 StackUser::StackUser(StackInterface *stack) : stack(stack) {}
 
 StackUser::~StackUser() {}
 
-void StackUser::cargarPila() {
+void StackUser::cargarVehiculo() {
     std::random_device rd;
     std::mt19937 gen(rd());
 
@@ -18,10 +19,26 @@ void StackUser::cargarPila() {
 
     Vehiculo* vehiculo = new Vehiculo(cantRuedas, tieneBaul, cilindraje);
 
-    qDebug() << "\nNuevo elemento:";
+    qDebug() << "\nNuevo vehículo:";
     vehiculo->mostrar();
 
     stack->push(vehiculo);
+}
+
+void StackUser::cargarDepartamento() {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+
+    int cantAmbientes = std::uniform_int_distribution<int>(1, 5)(gen);
+    double precio = std::uniform_real_distribution<double>(50000, 200000)(gen);
+    int piso = std::uniform_int_distribution<int>(1, 10)(gen);
+
+    Departamento* departamento = new Departamento(cantAmbientes, precio, piso);
+
+    qDebug() << "\nNuevo departamento:";
+    departamento->mostrar();
+
+    stack->push(departamento);
 }
 
 void StackUser::imprimirPila() {
