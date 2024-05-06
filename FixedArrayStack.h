@@ -14,6 +14,7 @@ class FixedArrayStack : public StackInterface
         virtual StackableObject * pop();
         virtual bool push(StackableObject *o);
         virtual int getCount();
+        virtual void print();
 
     protected:
 

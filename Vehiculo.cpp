@@ -1,5 +1,5 @@
 #include "Vehiculo.h"
-#include <iostream>
+#include <QDebug>
 
 Vehiculo::Vehiculo(int cantRuedas, bool tieneBaul, int cilindraje)
     : cantRuedas(cantRuedas), tieneBaul(tieneBaul), cilindraje(cilindraje) {}
@@ -29,7 +29,5 @@ void Vehiculo::setCilindraje(int cilindraje) {
 }
 
 void Vehiculo::mostrar() const {
-    std::cout << "Cantidad de ruedas: " << cantRuedas << std::endl;
-    std::cout << "Tiene baúl: " << (tieneBaul ? "Sí" : "No") << std::endl;
-    std::cout << "Cilindraje: " << cilindraje << " cc" << std::endl;
+    qDebug()  << "Cantidad de ruedas: " << cantRuedas << "   ||   Tiene baúl: " << (tieneBaul ? "Sí" : "No") << "   ||   Cilindraje: " << cilindraje << " cc";
 }

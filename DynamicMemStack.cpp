@@ -65,3 +65,12 @@ int DynamicMemStack::getCount()
 {
     return this->count;
 }
+
+void DynamicMemStack::print() {
+    qDebug() << "\nDynamic Memory Stack Contents:";
+    StackNode* current = top;
+    while (current != nullptr) {
+        current->getObject()->mostrar();
+        current = current->getPrevNode();
+    }
+}

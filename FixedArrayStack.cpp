@@ -48,3 +48,10 @@ int FixedArrayStack::getCount()
 {
     return this->indice;
 }
+
+void FixedArrayStack::print() {
+    qDebug() << "\nFixed Array Stack Contents:" ;
+    for (int i = indice - 1; i >= 0; --i) {
+        pila[i]->mostrar();
+    }
+}

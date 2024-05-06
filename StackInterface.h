@@ -2,6 +2,7 @@
 #define STACKINTERFACE_H
 
 #include <StackableObject.h>
+#include <QDebug>
 
 class StackInterface {
 public:
@@ -9,7 +10,7 @@ public:
     virtual bool push(StackableObject* object) = 0;
     virtual StackableObject* pop() = 0;
     virtual int getCount() = 0;
-    //virtual bool isEmpty() const = 0;
+    virtual void print() = 0;
 };
 
 
